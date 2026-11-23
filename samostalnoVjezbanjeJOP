@@ -1,0 +1,104 @@
+import javax.swing.JOptionPane;
+public class VjezbaJOptionPane {
+
+	public static void main(String[] args) {
+		
+  String ime =  JOptionPane.showInputDialog(null, "Kako se zoves ");
+  
+   JOptionPane.showMessageDialog(null, "Dobrodosao/la" +   " "+ ime + "!");
+   
+   String unos = JOptionPane.showInputDialog(null, "Koliko imate godina");
+   int godine = Integer.parseInt(unos);
+   JOptionPane.showMessageDialog(null, ime + ",  za 5 godina imaces " + (godine + 5) + " godina");
+  int odgovorNaPitanje = JOptionPane.showConfirmDialog(null, "Da li volite Javu");
+  if (odgovorNaPitanje == JOptionPane.YES_OPTION) {
+	  JOptionPane.showMessageDialog(null, "Super!");
+  }
+  if (odgovorNaPitanje == JOptionPane.NO_OPTION) {
+	  JOptionPane.showMessageDialog(null, "Steta!");
+  }
+   
+   
+	}
+
+}
+
+import javax.swing.JOptionPane;
+public class JOPZadatak1 {
+
+	public static void main(String[] args) {
+	
+		//Napraviti program za kupovinu ulaznice za bioskop...
+		
+		String ime = JOptionPane.showInputDialog("Dobar dan! Molimo unesite Vase ime");
+		String unosGodina = JOptionPane.showInputDialog("Unesite broj godina ");
+		int godine = Integer.parseInt(unosGodina);
+		if (godine < 16) {
+			JOptionPane.showMessageDialog(null, ime + ", ne mozete kupiti ulaznicu!");
+		} else {
+		int ulaznica =	JOptionPane.showConfirmDialog(null, "Da li zelite da kupite ulaznicu");
+			if (ulaznica == JOptionPane.YES_OPTION) {
+				JOptionPane.showMessageDialog(null, "Ulaznica je uspjesno kupljena.");
+			}
+			if (ulaznica == JOptionPane.NO_OPTION) {
+				JOptionPane.showMessageDialog(null, "Odustali ste od kupovine.");
+			} if (ulaznica == JOptionPane.CANCEL_OPTION) {
+				JOptionPane.showMessageDialog(null, "Kupovina je otkazana.");
+			}
+			
+		}
+
+	}
+
+}
+import javax.swing.JOptionPane;
+public class JOPZadatak2 {
+
+	public static void main(String[] args) {
+		// Program za narucivanje hrane, jedna pica kosta 8 EUR...
+		
+	  String ime = JOptionPane.showInputDialog("Dobar dan ! \nMolimo unesite Vase ime. \nHvala!");
+		String unosBrojPica = JOptionPane.showInputDialog(ime + ", koliko pica zelite naruciti");
+		int brojPica = Integer.parseInt(unosBrojPica);
+		JOptionPane.showMessageDialog(null, "Ukupno bi Vas kostalo " + (brojPica * 8) + " EUR za " + brojPica 
+				+ " pica");
+	int potvrda = 	JOptionPane.showConfirmDialog(null, "Da li zelite da potvrdite narudzbinu");
+		if (potvrda == JOptionPane.YES_OPTION) {
+			JOptionPane.showMessageDialog(null, ime + ", narudzba je potvrdjena. \nUkupno za placanje: " 
+		+  (brojPica*8) + " EUR");
+		}
+		if (potvrda == JOptionPane.NO_OPTION) {
+			JOptionPane.showMessageDialog(null, "Narudzba nije potvrdjena.");
+		}
+		if (potvrda == JOptionPane.CANCEL_OPTION) {
+			JOptionPane.showMessageDialog(null, "Narudzba je otkazana.");
+		}
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
