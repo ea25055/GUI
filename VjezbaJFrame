@@ -1,0 +1,46 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class PrvaForma extends JFrame {
+         public PrvaForma() {
+        	 super ("Prijava studenta");
+        	 this.setSize(400, 300);
+        	 this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        	 
+        	 JLabel labela = new JLabel ("Ime: ");
+             JTextField polje = new JTextField (10);
+             JButton dugme = new JButton ("Potvrdi");
+             
+             JLabel labelaP = new JLabel ("Prezime");
+             JTextField poljeP = new JTextField (10);
+             JButton dugmeP = new JButton ("Odustani");
+        	 
+             this.setLayout(new FlowLayout());
+        	 this.add(labela);
+        	 this.add(polje);
+        	
+        	 
+        	 this.add(labelaP);
+        	 this.add(poljeP);
+        	 this.add(dugme);
+        	 this.add(dugmeP);
+        	 
+        	 
+        
+	
+	public static void main(String[] args) {
+      PrvaForma forma = new PrvaForma ();
+    	  forma.setVisible(true);
+    		
+		
+		
+		
+		
+
+	}
+
+}
